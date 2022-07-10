@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  /* 底部导航栏 */
+  --bottom-navigation-height:50px;
+  --bottom-navigation-item-active-background-color:#fff;
+  --bottom-navigation-item-line-height:1;
+  --bottom-navigation-item-icon-size:22px;
+  --bottom-navigation-item-active-color:rgb(33, 140, 116);
+}
+/* 顶部栏 */
+.clearSticky{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
