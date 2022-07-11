@@ -47,7 +47,10 @@ const syncRoutes = [
 ]
 
 const asyncRoutes = [
-
+  {
+    path:'/profit',
+    component:()=>import('../views/User/Profit/index.vue')
+  }
 ]
 
 const routes = [...syncRoutes,...asyncRoutes]

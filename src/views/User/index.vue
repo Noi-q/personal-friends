@@ -1,6 +1,8 @@
 <script setup>
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 const messageLength = ref(0)
+const router = useRouter()
 const profitButton = ref([
   {
     title:'今日收益',
@@ -45,6 +47,16 @@ const moreSettings = ref([
     title:'公众号设置'
   }
 ])
+const goIssued = ()=>{
+  router.push({
+    path:'/write'
+  })
+}
+const goProfit = ()=>{
+  router.push({
+    path:'/profit'
+  })
+}
 </script>
 
 <template>
@@ -55,7 +67,7 @@ const moreSettings = ref([
     <div class="card">
       <div class="message-item">
         <div class="item" v-ripple>
-          <div class="icon">
+          <div class="icon" @click="goIssued">
             <i class="icon-item fa fa-comment"></i>
             <span class="icon-item">我发出的短信</span>
           </div>
@@ -67,7 +79,7 @@ const moreSettings = ref([
       </div>
     </div>
     <div class="card" style="padding-top: 5px;">
-      <div class="profit-item">
+      <div class="profit-item" @click="goProfit">
         <div class="item" v-for="item in profitButton" :key="item">
           <div class="content">
             <span class="content-item-money">{{item.content}}</span>

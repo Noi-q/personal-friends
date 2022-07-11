@@ -65,11 +65,12 @@
       }
       .image{
         position: absolute;
-        bottom: 0;
-        right: 10px;
+        bottom: -4px;
+        right: 0px;
         img{
           width: 100px;
           height: 100px;
+          border-radius: 0 0 15px 0;
         }
       }
     }
