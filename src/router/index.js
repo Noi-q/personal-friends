@@ -1,4 +1,4 @@
-import { createRouter,createWebHashHistory } from "vue-router";
+import { createRouter,createWebHistory } from "vue-router";
 import Layout from '../components/Layout/index.vue'
 const syncRoutes = [
   {
@@ -48,6 +48,10 @@ const syncRoutes = [
 
 const asyncRoutes = [
   {
+    path:'/home/write_message',
+    component: ()=>import('../views/Home/writeMessage/index.vue')
+  },
+  {
     path:'/profit',
     component:()=>import('../views/User/Profit/index.vue')
   }
@@ -55,7 +59,7 @@ const asyncRoutes = [
 
 const routes = [...syncRoutes,...asyncRoutes]
 const router = createRouter({
-  history:createWebHashHistory(),
+  history:createWebHistory('/friends/'),
   routes
 })
 

@@ -54,7 +54,7 @@ const handleClick = (active) => {
 </script>
 
 <template>
-  <var-bottom-navigation v-model:active="active" :fixed="true">
+  <var-bottom-navigation active-color="black" v-model:active="active" :fixed="true">
     <var-bottom-navigation-item @click="handleClick" label="写信" icon="message-text-outline" />
     <var-bottom-navigation-item @click="handleClick" label="计划" icon="magnify" />
     <var-bottom-navigation-item @click="handleClick" label="信箱" icon="message-processing-outline" />

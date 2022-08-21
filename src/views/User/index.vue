@@ -1,4 +1,8 @@
 <script setup>
+/***
+ * Author:Noi-q
+ * Email: noi.vcal@gmail.com
+ */
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
 const messageLength = ref(0)
@@ -62,7 +66,7 @@ const goProfit = ()=>{
 <template>
   <div class="user">
     <div class="clearSticky">
-      <Header title="我的" color="#eee" />
+      <Header title="我的" color="#f3f4f6" />
     </div>
     <div class="card">
       <div class="message-item">
@@ -106,7 +110,7 @@ const goProfit = ()=>{
 <style lang="less" scoped>
 .user{
   // height: 100vh;
-  background-color: #eee;
+  background-color: #f3f4f6;
 }
 .card{
   padding: 1rem;

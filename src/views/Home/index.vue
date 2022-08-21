@@ -1,10 +1,22 @@
 <script setup>
+/***
+ * Author:Noi-q
+ * Email: noi.vcal@gmail.com
+ */
+import {useRouter} from "vue-router"
+const router = useRouter()
+
+const goWriteMessage = ()=>{
+  router.push({
+    path:'/home/write_message'
+  })
+}
 </script>
 
 <template>
   <div class="write">
     <div class="clearSticky">
-      <Header title="私人朋友" color="#eee" />
+      <Header title="私人朋友" color="#f3f4f6" />
     </div>
     <div class="write-item">
       <div class="item">
@@ -20,7 +32,7 @@
           <span>至少在这个世界上你能真真切切的想到我</span>
         </div>
         <div class="btn">
-          <var-button type="success">去发短信</var-button>
+          <var-button type="success" @click="goWriteMessage">去发短信</var-button>
         </div>
         <div class="image">
           <img src="https://avatars.githubusercontent.com/u/76736117?v=4" alt="">
@@ -33,7 +45,7 @@
 <style lang="less" scoped>
 .write{
   height: 94vh;
-  background-color: #eee;
+  background-color: #f3f4f6;
   .write-item{
     // background-color: #eee;
     .item{

@@ -11,5 +11,8 @@ export default defineConfig({
     components({
       resolvers: [VarletUIResolver()]
     })
-  ]
+  ],
+  // 静态资源服务的文件夹
+  publicDir:'assets',
+  base:'/friends/'
 })

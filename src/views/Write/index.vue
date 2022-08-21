@@ -1,4 +1,8 @@
 <script setup>
+/***
+ * Author:Noi-q
+ * Email: noi.vcal@gmail.com
+ */
 import {ref} from 'vue'
 
 const activeTab = ref(0)
