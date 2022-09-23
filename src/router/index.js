@@ -54,12 +54,22 @@ const asyncRoutes = [
   {
     path:'/profit',
     component:()=>import('../views/User/Profit/index.vue')
+  },
+  // my
+  {
+    path:"/my/login",
+    component:()=>import('../views/User/login/index.vue')
+  },
+  {
+    path:"/my/register",
+    component:()=>import('../views/User/register/index.vue')
   }
 ]
 
 const routes = [...syncRoutes,...asyncRoutes]
 const router = createRouter({
-  history:createWebHistory('/friends/'),
+  //history:createWebHistory('/friends/'),
+  history:createWebHistory(),
   routes
 })
 

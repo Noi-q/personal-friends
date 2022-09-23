@@ -13,6 +13,6 @@ export default defineConfig({
     })
   ],
   // 静态资源服务的文件夹
-  publicDir:'assets',
-  base:'/friends/'
+  //publicDir:'assets',
+  //base:'/friends/'
 })

@@ -27,6 +27,10 @@ const profitButton = ref([
 ])
 const moreSettings = ref([
   {
+    id:0,
+    title:"个人设置"
+  },
+  {
     id:1,
     title:'代理开通设置'
   },
@@ -34,23 +38,35 @@ const moreSettings = ref([
     id:2,
     title:'查看我的代理'
   },
-  {
-    id:3,
-    title:'网页标题设置'
-  },
+  // {
+  //   id:3,
+  //   title:'网页标题设置'
+  // },
   {
     id:4,
     title:'短信后缀配置'
   },
+  // {
+  //   id:5,
+  //   title:'公众号名称设置'
+  // },
+  // {
+  //   id:6,
+  //   title:'公众号设置'
+  // },
   {
-    id:5,
-    title:'公众号名称设置'
-  },
-  {
-    id:6,
-    title:'公众号设置'
+    id:7,
+    title:"点击登录"
   }
 ])
+const setting = (item)=>{
+  // 登录
+  if(item.id === 7){
+    router.push({
+      path:"/my/login"
+    })
+  }
+}
 const goIssued = ()=>{
   router.push({
     path:'/write'
@@ -98,7 +114,7 @@ const goProfit = ()=>{
     <div class="card" style="padding-top: 5px;">
       <span class="more-settings-title">更多设置</span>
       <div class="more-settings-item" style="padding-top: 5px;">
-        <div class="item" v-for="item in moreSettings" :key="item.id" v-ripple>
+        <div class="item" v-for="item in moreSettings" :key="item.id" v-ripple @click="setting(item)">
           <span class="title-item">{{item.title}}</span>
           <i class="icon-item fa fa-angle-right"></i>
         </div>
@@ -109,7 +125,7 @@ const goProfit = ()=>{
 
 <style lang="less" scoped>
 .user{
-  // height: 100vh;
+   height: 100vh;
   background-color: #f3f4f6;
 }
 .card{
